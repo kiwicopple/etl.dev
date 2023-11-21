@@ -1,1 +1,33 @@
 # Extract
+
+## Extracting Data from Source Systems
+
+Extracting data is the first phase of the ETL process, involving retrieval of data from various source systems. This step is crucial as it sets the foundation for the data transformation and loading phases.
+
+### Types of Data Sources
+
+Data can be extracted from a multitude of sources, including:
+
+- **Databases:** SQL, NoSQL databases.
+- **Cloud Storage:** AWS S3, Google Cloud Storage.
+- **APIs:** RESTful services, web APIs.
+- **File Systems:** CSV, Excel, XML files.
+- **Streaming Data:** Real-time data from IoT devices, social media.
+
+### Data Extraction Methods
+
+The method of extraction depends on the source type and the nature of the data:
+
+- **Full Extraction:** Pulling all data from the source system.
+- **Incremental Extraction:** Retrieving only new or changed data since the last extraction.
+- **Logical Extraction:** Extracting data based on logical views or queries.
+- **Physical Extraction:** Copying data exactly as it is stored.
+
+### Data Extraction Challenges and Solutions
+
+Common challenges in data extraction include:
+
+- **Data Quality Issues:** Inconsistent or missing data can be addressed by implementing data validation rules.
+- **Complex Data Formats:** Use transformation tools to convert data into a uniform format.
+- **High Volumes:** Opt for incremental extraction methods to handle large datasets efficiently.
+- **System Performance:** Balance the load by scheduling extractions during off-peak hours.

@@ -1,5 +1,6 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)"
+  "extract": "Extract",
+  "transform": "Transform",
+  "load": "Load"
 }

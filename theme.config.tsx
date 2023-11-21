@@ -12,8 +12,7 @@ const config: DocsThemeConfig = {
     text: null,
   },  
   toc: {
-    extraContent: false,
-    backToTop: true
+    extraContent: false
   },
   feedback: {
     content: null

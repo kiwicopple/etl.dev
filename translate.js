@@ -1,4 +1,4 @@
-require("dotenv").config() // Load environment variables from .env file
+require("dotenv").config()
 const fs = require("fs")
 const OpenAI = require("openai")
 
@@ -10,7 +10,8 @@ const openai = new OpenAI({
 const locales = ["zh-CN"] // Add more locales here
 const files = fs.readdirSync("./pages")
 
-async function translateText(text, targetLanguage) {
+async function translateText(text, targetLanguage, fileName) {
+  console.log(`Starting translation of ${fileName} to ${targetLanguage}`)
   try {
     const params = {
       messages: [
@@ -23,25 +24,46 @@ async function translateText(text, targetLanguage) {
     }
     const chatCompletion = await openai.chat.completions.create(params)
 
+    console.log(`Completed translation of ${fileName} to ${targetLanguage}`)
     return chatCompletion.choices[0].message.content.trim()
   } catch (error) {
-    console.error("Error in translation:", error)
+    console.error(
+      `Error in translating ${fileName} to ${targetLanguage}:`,
+      error
+    )
     return ""
   }
 }
 
 ;(async () => {
-  for (let file of files) {
+  const translationPromises = []
+
+  files.forEach((file) => {
     if (file.indexOf("en-US.mdx") === -1) {
-      continue
+      return
     }
+
     const content = fs.readFileSync(`./pages/${file}`, "utf-8")
 
-    for (let locale of locales) {
-      console.log("Translating: ", file)
-      const translatedContent = await translateText(content, locale)
-      const newFileName = file.replace("en-US.mdx", `${locale}.mdx`)
-      fs.writeFileSync(`./pages/${newFileName}`, translatedContent)
-    }
-  }
+    locales.forEach((locale) => {
+      translationPromises.push({
+        file,
+        locale,
+        promise: translateText(content, locale, file),
+      })
+    })
+  })
+
+  console.log("Starting all translations...")
+  const results = await Promise.all(translationPromises.map((p) => p.promise))
+  console.log("All translations completed. Writing to files...")
+
+  results.forEach((translatedContent, index) => {
+    const { file, locale } = translationPromises[index]
+    const newFileName = file.replace("en-US.mdx", `${locale}.mdx`)
+    console.log(`Writing translated content of ${file} to ${newFileName}`)
+    fs.writeFileSync(`./pages/${newFileName}`, translatedContent)
+  })
+
+  console.log("All files have been written successfully.")
 })()

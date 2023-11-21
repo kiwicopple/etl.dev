@@ -1,21 +1,21 @@
 import React from 'react'
-import { DocsThemeConfig,  } from 'nextra-theme-docs'
+import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
   logo: <span>ETL</span>,
   useNextSeoProps() {
     return {
       titleTemplate: '%s – etl.dev',
-    };
+    }
   },
   editLink: {
     text: null,
-  },  
+  },
   toc: {
-    extraContent: false
+    extraContent: false,
   },
   feedback: {
-    content: null
+    content: null,
   },
   footer: {
     text: (
@@ -25,12 +25,13 @@ const config: DocsThemeConfig = {
           Supabase
         </a>
       </span>
-    )
+    ),
   },
   i18n: [
     { locale: 'en-US', text: 'English' },
-    { locale: 'zh-CN', text: '中文' },
-  ]
+    { locale: 'jp-JP', text: '日本語 (Japanese)' },
+    { locale: 'zh-CN', text: '中文 (Mandarin)' },
+  ],
 }
 
 export default config

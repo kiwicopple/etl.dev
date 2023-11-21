@@ -1,9 +1,5 @@
 {
   "index": "Introduction",
   "extract": "Extract",
-  "transform": "Transform",
-  "load": "Load",
-  "etl-vs-elt": "ETL vs ELT",
-  "best-practices": "Best practices",
-  "tools": "ETL Tools"
+  "transform": "Transform"
 }

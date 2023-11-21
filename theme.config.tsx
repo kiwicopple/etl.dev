@@ -12,14 +12,22 @@ const config: DocsThemeConfig = {
     text: null,
   },  
   toc: {
-    extraContent: false
+    extraContent: false,
+    backToTop: true
   },
   feedback: {
     content: null
   },
   footer: {
-    text: 'Sponsored by Supabase',
-  },
+    text: (
+      <span>
+        Sponsored by{' '}
+        <a href="https://supabase.com" target="_blank">
+          Supabase
+        </a>
+      </span>
+    )
+  }
 }
 
 export default config

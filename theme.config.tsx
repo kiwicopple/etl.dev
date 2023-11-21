@@ -3,6 +3,14 @@ import { DocsThemeConfig,  } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
   logo: <span>ETL</span>,
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – etl.dev',
+    };
+  },
+  editLink: {
+    text: null,
+  },  
   toc: {
     extraContent: false
   },

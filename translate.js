@@ -1,14 +1,14 @@
-require("dotenv").config()
-const fs = require("fs")
-const OpenAI = require("openai")
+require('dotenv').config()
+const fs = require('fs')
+const OpenAI = require('openai')
 
 const openai = new OpenAI({
-  apiKey: process.env["OPENAI_API_KEY"],
-  organization: process.env["OPENAI_ORG"],
+  apiKey: process.env['OPENAI_API_KEY'],
+  organization: process.env['OPENAI_ORG'],
 })
 
-const locales = ["zh-CN"] // Add more locales here
-const files = fs.readdirSync("./pages")
+const locales = ['zh-CN', 'jp-JP'] // Add more locales here
+const files = fs.readdirSync('./pages')
 
 async function translateText(text, targetLanguage, fileName) {
   console.log(`Starting translation of ${fileName} to ${targetLanguage}`)
@@ -16,11 +16,11 @@ async function translateText(text, targetLanguage, fileName) {
     const params = {
       messages: [
         {
-          role: "user",
+          role: 'user',
           content: `Translate the following English markdown to ${targetLanguage}. Do not change any of the markdown formatting:\n\n${text}.`,
         },
       ],
-      model: "gpt-3.5-turbo",
+      model: 'gpt-3.5-turbo',
     }
     const chatCompletion = await openai.chat.completions.create(params)
 
@@ -31,7 +31,7 @@ async function translateText(text, targetLanguage, fileName) {
       `Error in translating ${fileName} to ${targetLanguage}:`,
       error
     )
-    return ""
+    return ''
   }
 }
 
@@ -39,11 +39,11 @@ async function translateText(text, targetLanguage, fileName) {
   const translationPromises = []
 
   files.forEach((file) => {
-    if (file.indexOf("en-US.mdx") === -1) {
+    if (file.indexOf('en-US.mdx') === -1) {
       return
     }
 
-    const content = fs.readFileSync(`./pages/${file}`, "utf-8")
+    const content = fs.readFileSync(`./pages/${file}`, 'utf-8')
 
     locales.forEach((locale) => {
       translationPromises.push({
@@ -54,16 +54,16 @@ async function translateText(text, targetLanguage, fileName) {
     })
   })
 
-  console.log("Starting all translations...")
+  console.log('Starting all translations...')
   const results = await Promise.all(translationPromises.map((p) => p.promise))
-  console.log("All translations completed. Writing to files...")
+  console.log('All translations completed. Writing to files...')
 
   results.forEach((translatedContent, index) => {
     const { file, locale } = translationPromises[index]
-    const newFileName = file.replace("en-US.mdx", `${locale}.mdx`)
+    const newFileName = file.replace('en-US.mdx', `${locale}.mdx`)
     console.log(`Writing translated content of ${file} to ${newFileName}`)
     fs.writeFileSync(`./pages/${newFileName}`, translatedContent)
   })
 
-  console.log("All files have been written successfully.")
+  console.log('All files have been written successfully.')
 })()

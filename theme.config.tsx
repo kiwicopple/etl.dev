@@ -6,6 +6,9 @@ const config: DocsThemeConfig = {
   toc: {
     extraContent: false
   },
+  feedback: {
+    content: null
+  },
   footer: {
     text: 'Sponsored by Supabase',
   },

@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Introduktion"
+  },
+  "extract": {
+    "title": "Extrahera"
+  },
+  "transform": {
+    "title": "Transformera"
+  },
+  "load": {
+    "title": "Ladda"
+  },
+  "etl-vs-elt": {
+    "title": "ETL vs ELT"
+  },
+  "best-practices": {
+    "title": "Bästa praxis"
+  },
+  "tools": {
+    "title": "ETL-verktyg"
+  }
+}.

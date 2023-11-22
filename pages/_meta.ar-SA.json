@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "المقدمة"
+  },
+  "extract": {
+    "title": "الاستخراج"
+  },
+  "transform": {
+    "title": "التحويل"
+  },
+  "load": {
+    "title": "التحميل"
+  },
+  "etl-vs-elt": {
+    "title": "ETL مقابل ELT"
+  },
+  "best-practices": {
+    "title": "أفضل الممارسات"
+  },
+  "tools": {
+    "title": "أدوات ETL"
+  }
+}

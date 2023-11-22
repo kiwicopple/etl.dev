@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "परिचय"
+  },
+  "extract": {
+    "title": "निष्कर्षण"
+  },
+  "transform": {
+    "title": "परिवर्तन"
+  },
+  "load": {
+    "title": "लोड"
+  },
+  "etl-vs-elt": {
+    "title": "ETL बनाम ELT"
+  },
+  "best-practices": {
+    "title": "सर्वोत्तम प्रथाएँ"
+  },
+  "tools": {
+    "title": "ETL उपकरण"
+  }
+}

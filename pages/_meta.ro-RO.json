@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Introducere"
+  },
+  "extract": {
+    "title": "Extragere"
+  },
+  "transform": {
+    "title": "Transformare"
+  },
+  "load": {
+    "title": "Încărcare"
+  },
+  "etl-vs-elt": {
+    "title": "ETL vs ELT"
+  },
+  "best-practices": {
+    "title": "Cele mai bune practici"
+  },
+  "tools": {
+    "title": "Instrumente ETL"
+  }
+}

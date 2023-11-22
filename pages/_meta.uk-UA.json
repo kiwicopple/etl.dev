@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Вступ"
+  },
+  "extract": {
+    "title": "Видобування"
+  },
+  "transform": {
+    "title": "Трансформація"
+  },
+  "load": {
+    "title": "Завантаження"
+  },
+  "etl-vs-elt": {
+    "title": "ETL проти ELT"
+  },
+  "best-practices": {
+    "title": "Найкращі практики"
+  },
+  "tools": {
+    "title": "ETL Інструменти"
+  }
+}.

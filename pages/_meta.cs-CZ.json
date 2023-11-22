@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Úvod"
+  },
+  "extract": {
+    "title": "Extrakt"
+  },
+  "transform": {
+    "title": "Transformace"
+  },
+  "load": {
+    "title": "Načíst"
+  },
+  "etl-vs-elt": {
+    "title": "ETL vs ELT"
+  },
+  "best-practices": {
+    "title": "Nejlepší postupy"
+  },
+  "tools": {
+    "title": "Nástroje ETL"
+  }
+}.

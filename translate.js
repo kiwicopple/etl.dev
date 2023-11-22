@@ -8,6 +8,7 @@ const openai = new OpenAI({
 })
 const primaryLocale = 'en-US'
 const primarySuffix = 'en-US.mdx'
+const fileExtension = 'mdx'
 const localeList = [
   { locale: 'en-US', text: '🇺🇸 English' },
   { locale: 'zh-CN', text: '🇨🇳 Chinese (Simplified)' },
@@ -63,7 +64,10 @@ async function translateAndWriteFile(text, targetLanguage, fileName) {
     const chatCompletion = await openai.chat.completions.create(params)
     const translatedContent = chatCompletion.choices[0].message.content.trim()
 
-    const newFileName = fileName.replace('en-US.mdx', `${targetLanguage}.mdx`)
+    const newFileName = fileName.replace(
+      primarySuffix,
+      `${targetLanguage}.${fileExtension}`
+    )
     fs.writeFileSync(`./pages/${newFileName}`, translatedContent)
     console.log(`Completed translation and wrote ${fileName} to ${newFileName}`)
   } catch (error) {

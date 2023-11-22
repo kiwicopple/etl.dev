@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "تعارف"
+  },
+  "extract": {
+    "title": "استخراج"
+  },
+  "transform": {
+    "title": "تبدیل"
+  },
+  "load": {
+    "title": "بارگذاری"
+  },
+  "etl-vs-elt": {
+    "title": "ETL برابر ELT"
+  },
+  "best-practices": {
+    "title": "مراجعات برتر"
+  },
+  "tools": {
+    "title": "ابزارهای ETL"
+  }
+}

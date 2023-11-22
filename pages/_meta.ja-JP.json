@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "イントロダクション"
+  },
+  "extract": {
+    "title": "抽出"
+  },
+  "transform": {
+    "title": "変換"
+  },
+  "load": {
+    "title": "ロード"
+  },
+  "etl-vs-elt": {
+    "title": "ETL vs ELT"
+  },
+  "best-practices": {
+    "title": "ベストプラクティス"
+  },
+  "tools": {
+    "title": "ETLツール"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Εισαγωγή"
+  },
+  "extract": {
+    "title": "Εξαγωγή"
+  },
+  "transform": {
+    "title": "Μετατροπή"
+  },
+  "load": {
+    "title": "Φόρτωση"
+  },
+  "etl-vs-elt": {
+    "title": "ETL εναντίον ELT"
+  },
+  "best-practices": {
+    "title": "Καλές πρακτικές"
+  },
+  "tools": {
+    "title": "Εργαλεία ETL"
+  }
+}.

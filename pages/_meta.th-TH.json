@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "บทนำ"
+  },
+  "extract": {
+    "title": "สกัด"
+  },
+  "transform": {
+    "title": "แปลง"
+  },
+  "load": {
+    "title": "โหลด"
+  },
+  "etl-vs-elt": {
+    "title": "ETL vs ELT"
+  },
+  "best-practices": {
+    "title": "ปฏิบัติที่ดีที่สุด"
+  },
+  "tools": {
+    "title": "เครื่องมือ ETL"
+  }
+}

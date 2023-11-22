@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Giới thiệu"
+  },
+  "extract": {
+    "title": "Trích dẫn"
+  },
+  "transform": {
+    "title": "Biến đổi"
+  },
+  "load": {
+    "title": "Tải lên"
+  },
+  "etl-vs-elt": {
+    "title": "ETL so với ELT"
+  },
+  "best-practices": {
+    "title": "Phương pháp tốt nhất"
+  },
+  "tools": {
+    "title": "Công cụ ETL"
+  }
+}

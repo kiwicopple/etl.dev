@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Giriş"
+  },
+  "extract": {
+    "title": "Çıkart"
+  },
+  "transform": {
+    "title": "Dönüştür"
+  },
+  "load": {
+    "title": "Yükle"
+  },
+  "etl-vs-elt": {
+    "title": "ETL vs ELT"
+  },
+  "best-practices": {
+    "title": "En iyi uygulamalar"
+  },
+  "tools": {
+    "title": "ETL Araçları"
+  }
+}

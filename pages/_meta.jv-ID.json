@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Pengantar"
+  },
+  "extract": {
+    "title": "Ekstrak"
+  },
+  "transform": {
+    "title": "Transformasi"
+  },
+  "load": {
+    "title": "Muat"
+  },
+  "etl-vs-elt": {
+    "title": "ETL vs ELT"
+  },
+  "best-practices": {
+    "title": "Praktik terbaik"
+  },
+  "tools": {
+    "title": "Alat ETL"
+  }
+}.

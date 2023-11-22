@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Wprowadzenie"
+  },
+  "extract": {
+    "title": "Wyodrębnij"
+  },
+  "transform": {
+    "title": "Przekształć"
+  },
+  "load": {
+    "title": "Załaduj"
+  },
+  "etl-vs-elt": {
+    "title": "ETL kontra ELT"
+  },
+  "best-practices": {
+    "title": "Najlepsze praktyki"
+  },
+  "tools": {
+    "title": "Narzędzia ETL"
+  }
+}

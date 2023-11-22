@@ -1,0 +1,23 @@
+{
+  "index": {
+    "title": "Въведение"
+  },
+  "extract": {
+    "title": "Извличане"
+  },
+  "transform": {
+    "title": "Трансформация"
+  },
+  "load": {
+    "title": "Зареждане"
+  },
+  "etl-vs-elt": {
+    "title": "ETL срещу ELT"
+  },
+  "best-practices": {
+    "title": "Най-добри практики"
+  },
+  "tools": {
+    "title": "ETL инструменти"
+  }
+}

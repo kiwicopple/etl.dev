@@ -1,0 +1,31 @@
+# ETL vs. ELT
+
+ETL (Extract, Transform, Load) ve ELT (Extract, Load, Transform) arasındaki farkları anlamak, veri akışı için doğru yaklaşımı seçmek için önemlidir.
+
+## Temel Farklar: ETL vs. ELT
+
+- **İşlem Sırası:** ETL, yüklemeden önce veriyi dönüştürürken, ELT önce veriyi yükler ve ardından dönüştürür.
+- **Veri İşleme Yeri:** ETL, genellikle hedef sistem dışında veri dönüşümü yapar, oysa ELT, dönüşüm için hedef sistemin gücünden faydalanır.
+- **Esneklik:** ELT genellikle daha esnek olma eğilimindedir, veri yüklendikten sonra dönüşümlere izin verir.
+
+## Ne Zaman ETL Kullanılır, Ne Zaman ELT Kullanılır
+
+- **ETL:** Eski sistemlerle çalışırken veya verinin yüklemeden önce yoğun bir şekilde dönüştürülmesi gerektiğinde tercih edilir.
+- **ELT:** Büyük veri uygulamaları ve bulut tabanlı sistemler için idealdir, depolama ve işleme gücü daha ölçeklenebilir olduğunda.
+
+## ETL ve ELT'nin Artıları ve Eksileri
+
+### ETL
+
+- **Artılar:** Karmaşık dönüşümler için daha iyidir; veri gizliliğini korumak için kullanışlıdır.
+- **Eksiler:** Zaman alıcı olabilir; sınırlı ölçeklenebilirlik.
+
+### ELT
+
+- **Artılar:** Büyük veri hacimleri için daha hızlı; yüksek ölçeklenebilirlik.
+- **Eksiler:** Güçlü hedef sistemlere ihtiyaç duyar; potansiyel güvenlik endişeleri.
+
+## Gerçek Dünya Kullanım Örnekleri
+
+- **ETL:** Veri yüklemeden önce dönüştürülmesi ve temizlenmesi gereken finansal raporlama.
+- **ELT:** Büyük veri analitiği, büyük veri kümeleri önce yüklenir ve ardından analitik ihtiyaçlara göre dönüştürülür.

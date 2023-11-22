@@ -1,0 +1,33 @@
+# Extractar
+
+## Extracción de datos de los sistemas fuente
+
+La extracción de datos es la primera fase del proceso ETL, que implica la recuperación de datos de varios sistemas fuente. Este paso es crucial ya que sienta las bases para las fases de transformación y carga de datos.
+
+### Tipos de fuentes de datos
+
+Los datos se pueden extraer de una multitud de fuentes, que incluyen:
+
+- **Bases de datos:** bases de datos SQL, NoSQL.
+- **Almacenamiento en la nube:** AWS S3, Google Cloud Storage.
+- **APIs:** servicios RESTful, APIs web.
+- **Sistemas de archivos:** archivos CSV, Excel, XML.
+- **Datos en streaming:** datos en tiempo real de dispositivos IoT, redes sociales.
+
+### Métodos de extracción de datos
+
+El método de extracción depende del tipo de fuente y la naturaleza de los datos:
+
+- **Extracción completa:** extracción de todos los datos del sistema fuente.
+- **Extracción incremental:** recuperación únicamente de datos nuevos o modificados desde la última extracción.
+- **Extracción lógica:** extracción de datos basada en vistas lógicas o consultas.
+- **Extracción física:** copia de datos tal y como están almacenados.
+
+### Desafíos y soluciones en la extracción de datos
+
+Los desafíos comunes en la extracción de datos incluyen:
+
+- **Problemas de calidad de los datos:** los datos inconsistentes o faltantes se pueden abordar mediante la implementación de reglas de validación de datos.
+- **Formatos de datos complejos:** utilizar herramientas de transformación para convertir los datos a un formato uniforme.
+- **Grandes volúmenes:** optar por métodos de extracción incremental para manejar conjuntos de datos grandes de manera eficiente.
+- **Rendimiento del sistema:** equilibrar la carga programando extracciones durante las horas de menor actividad.

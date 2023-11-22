@@ -1,0 +1,31 @@
+# ETL vs. ELT
+
+Zrozumienie różnic między ETL (Extract, Transform, Load) a ELT (Extract, Load, Transform) jest kluczowe przy wyborze odpowiedniego podejścia dla twojego potoku danych.
+
+## Główne różnice: ETL vs. ELT
+
+- **Kolejność przetwarzania:** ETL przekształca dane przed załadowaniem, podczas gdy ELT najpierw ładuje dane, a następnie je przekształca.
+- **Lokalizacja przetwarzania danych:** ETL często przekształca dane poza systemem docelowym, podczas gdy ELT wykorzystuje moc systemu docelowego do przekształceń.
+- **Elastyczność:** ELT jest zwykle bardziej elastyczny, umożliwiając przekształcenia po załadowaniu danych.
+
+## Kiedy używać ETL vs. ELT
+
+- **ETL:** Preferowane przy pracy z systemami dziedzictwa lub gdy dane wymagają intensywnego przekształcenia przed załadowaniem.
+- **ELT:** Idealne do zastosowań w dużych zbiorach danych i systemach opartych na chmurze, gdzie skalowalność pamięci masowej i mocy obliczeniowej jest większa.
+
+## Zalety i wady ETL i ELT
+
+### ETL
+
+- **Zalety:** Lepsze przy skomplikowanych przekształceniach; przydatne do utrzymania prywatności danych.
+- **Wady:** Może być czasochłonne; ograniczona skalowalność.
+
+### ELT
+
+- **Zalety:** Szybsze dla dużych wolumenów danych; bardzo skalowalne.
+- **Wady:** Wymaga solidnych systemów docelowych; potencjalne problemy z bezpieczeństwem.
+
+## Przykłady zastosowań w rzeczywistych sytuacjach
+
+- **ETL:** Raportowanie finansowe, gdzie dane muszą być przekształcone i oczyszczone przed załadowaniem.
+- **ELT:** Analiza dużych zbiorów danych, gdzie duże zestawy danych są najpierw ładowane, a następnie przekształcane na podstawie potrzeb analitycznych.

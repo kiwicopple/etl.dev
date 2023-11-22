@@ -1,0 +1,31 @@
+# ETL vs. ELT
+
+Comprendere le differenze tra ETL (Estrazione, Trasformazione, Caricamento) e ELT (Estrazione, Caricamento, Trasformazione) è cruciale per selezionare l'approccio giusto per il tuo flusso dati.
+
+## Principali differenze: ETL vs. ELT
+
+- **Ordine di elaborazione:** ETL trasforma i dati prima del caricamento, mentre ELT carica i dati prima e poi li trasforma.
+- **Posizione di elaborazione dei dati:** ETL spesso trasforma i dati al di fuori del sistema di destinazione, mentre ELT utilizza la potenza del sistema di destinazione per la trasformazione.
+- **Flessibilità:** ELT tende ad essere più flessibile, consentendo trasformazioni dopo il caricamento dei dati.
+
+## Quando utilizzare ETL vs. ELT
+
+- **ETL:** Preferito quando si lavora con sistemi legacy o quando i dati necessitano di una trasformazione intensiva prima del caricamento.
+- **ELT:** Ideale per applicazioni di big data e sistemi basati su cloud, dove la memorizzazione e la potenza di elaborazione sono più scalabili.
+
+## Pro e contro di ETL ed ELT
+
+### ETL
+
+- **Pro:** Migliore per trasformazioni complesse; utile per mantenere la privacy dei dati.
+- **Contro:** Può richiedere molto tempo; scalabilità limitata.
+
+### ELT
+
+- **Pro:** Più veloce per grandi volumi di dati; altamente scalabile.
+- **Contro:** Richiede sistemi di destinazione robusti; possibili preoccupazioni per la sicurezza.
+
+## Casi d'uso reali
+
+- **ETL:** Reporting finanziario in cui i dati devono essere trasformati e puliti prima del caricamento.
+- **ELT:** Analisi di big data in cui vengono prima caricati grandi set di dati e poi trasformati in base alle esigenze analitiche.

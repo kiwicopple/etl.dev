@@ -1,0 +1,31 @@
+# ETL vs. ELT
+
+Förstå skillnaderna mellan ETL (Extract, Transform, Load) och ELT (Extract, Load, Transform) är viktigt för att välja rätt tillvägagångssätt för din datapipeline.
+
+## Huvudsakliga skillnader: ETL vs. ELT
+
+- **Processordning:** ETL transformerar data innan det laddas, medan ELT laddar data först och transformerar sedan det.
+- **Plats för datatransformation:** ETL transformerar ofta data utanför målsystemet, medan ELT utnyttjar kraften i målsystemet för transformation.
+- **Flexibilitet:** ELT tenderar att vara mer flexibelt och tillåter transformationer efter att data har laddats.
+
+## När ska man använda ETL vs. ELT
+
+- **ETL:** Föredras vid arbete med äldre system eller när data behöver intensiv transformation innan det laddas.
+- **ELT:** Idealiskt för big data-applikationer och molnbaserade system, där lagring och processkraft är mer skalbara.
+
+## Fördelar och nackdelar med ETL och ELT
+
+### ETL
+
+- **Fördelar:** Bättre för komplexa transformationer; användbart för att upprätthålla datasekretess.
+- **Nackdelar:** Kan vara tidskrävande; begränsad skalbarhet.
+
+### ELT
+
+- **Fördelar:** Snabbare för stora datavolymer; hög skalbarhet.
+- **Nackdelar:** Kräver robusta målsystem; potentiella säkerhetsproblem.
+
+## Verkliga användningsfall
+
+- **ETL:** Finansiell rapportering där data måste transformeras och rensas innan det laddas.
+- **ELT:** Big data-analys där stora dataset först laddas och sedan transformeras baserat på analytiska behov.

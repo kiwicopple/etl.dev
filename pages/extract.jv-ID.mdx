@@ -1,0 +1,33 @@
+# Ekstraksi
+
+## Ekstraksi Data dari Sistem Sumber
+
+Ekstraksi data adalah tahap pertama dari proses ETL, yang melibatkan pengambilan data dari berbagai sistem sumber. Langkah ini sangat penting karena menetapkan dasar untuk tahap transformasi dan pemuatan data.
+
+### Jenis Sumber Data
+
+Data dapat diekstraksi dari berbagai sumber, termasuk:
+
+- **Database:** SQL, database NoSQL.
+- **Layanan Penyimpanan Cloud:** AWS S3, Google Cloud Storage.
+- **API:** Layanan RESTful, API web.
+- **Sistem File:** Berkas CSV, Excel, XML.
+- **Data Streaming:** Data waktu nyata dari perangkat IoT, media sosial.
+
+### Metode Ekstraksi Data
+
+Metode ekstraksi bergantung pada jenis sumber dan karakteristik data:
+
+- **Ekstraksi Penuh:** Menarik semua data dari sistem sumber.
+- **Ekstraksi Incremental:** Mengambil hanya data baru atau yang berubah sejak ekstraksi terakhir.
+- **Ekstraksi Logis:** Mengambil data berdasarkan tampilan atau kueri logis.
+- **Ekstraksi Fisik:** Menyalin data persis seperti yang disimpan.
+
+### Tantangan dan Solusi Ekstraksi Data
+
+Tantangan umum dalam ekstraksi data meliputi:
+
+- **Masalah Kualitas Data:** Data yang tidak konsisten atau hilang dapat diselesaikan dengan menerapkan aturan validasi data.
+- **Format Data yang Kompleks:** Gunakan alat transformasi untuk mengonversi data ke dalam format yang seragam.
+- **Volume Tinggi:** Pilih metode ekstraksi incremental untuk mengatasi set data besar secara efisien.
+- **Kinerja Sistem:** Seimbangkan beban dengan menjadwalkan ekstraksi selama jam sibuk rendah.

@@ -1,0 +1,31 @@
+# ETL vs. ELT
+
+Hiểu sự khác biệt giữa ETL (Extract, Transform, Load) và ELT (Extract, Load, Transform) là rất quan trọng để lựa chọn phương pháp phù hợp cho đường ống dữ liệu của bạn.
+
+## Sự khác biệt chính: ETL vs. ELT
+
+- **Thứ tự xử lý:** ETL biến đổi dữ liệu trước khi tải, trong khi ELT tải dữ liệu trước và sau đó biến đổi.
+- **Vị trí xử lý dữ liệu:** ETL thường biến đổi dữ liệu bên ngoài hệ thống mục tiêu, trong khi ELT sử dụng sức mạnh của hệ thống mục tiêu để biến đổi.
+- **Tính linh hoạt:** ELT có xu hướng linh hoạt hơn, cho phép những biến đổi sau khi dữ liệu được tải.
+
+## Khi nào sử dụng ETL vs. ELT
+
+- **ETL:** Ưu tiên khi làm việc với hệ thống cũ hoặc khi dữ liệu cần chuyển đổi mạnh mẽ trước khi tải.
+- **ELT:** Lý tưởng cho ứng dụng dữ liệu lớn và hệ thống dựa trên đám mây, nơi lưu trữ và công suất xử lý cao hơn.
+
+## Ưu điểm và nhược điểm của ETL và ELT
+
+### ETL
+
+- **Ưu điểm:** Tốt hơn cho các biến đổi phức tạp; hữu ích để duy trì quyền riêng tư dữ liệu.
+- **Nhược điểm:** Có thể tốn thời gian; khả năng mở rộng hạn chế.
+
+### ELT
+
+- **Ưu điểm:** Nhanh hơn cho khối lượng dữ liệu lớn; có khả năng mở rộng cao.
+- **Nhược điểm:** Yêu cầu hệ thống mục tiêu mạnh mẽ; có thể gây lo ngại về bảo mật.
+
+## Các trường hợp sử dụng thực tế
+
+- **ETL:** Báo cáo tài chính nơi dữ liệu phải được biến đổi và làm sạch trước khi tải.
+- **ELT:** Phân tích dữ liệu lớn nơi tập dữ liệu lớn được tải trước và sau đó biến đổi dựa trên nhu cầu phân tích.

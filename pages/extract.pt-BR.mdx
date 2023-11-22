@@ -1,0 +1,33 @@
+# Extração
+
+## Extração de Dados dos Sistemas Fonte
+
+A extração de dados é a primeira fase do processo ETL, envolvendo a recuperação de dados de diversos sistemas fonte. Esta etapa é crucial, pois estabelece a base para as fases de transformação e carga de dados.
+
+### Tipos de Fontes de Dados
+
+Os dados podem ser extraídos de uma infinidade de fontes, incluindo:
+
+- **Bancos de Dados:** SQL, bancos de dados NoSQL.
+- **Armazenamento em Nuvem:** AWS S3, Google Cloud Storage.
+- **APIs:** Serviços RESTful, APIs web.
+- **Sistemas de Arquivos:** Arquivos CSV, Excel, XML.
+- **Dados em Tempo Real:** Dados em tempo real de dispositivos IoT, mídias sociais.
+
+### Métodos de Extração de Dados
+
+O método de extração depende do tipo de fonte e da natureza dos dados:
+
+- **Extração Completa:** Obtendo todos os dados do sistema fonte.
+- **Extração Incremental:** Recuperando apenas dados novos ou alterados desde a última extração.
+- **Extração Lógica:** Extração de dados com base em visualizações lógicas ou consultas.
+- **Extração Física:** Copiando os dados exatamente como estão armazenados.
+
+### Desafios e Soluções na Extração de Dados
+
+Os desafios comuns na extração de dados incluem:
+
+- **Problemas de Qualidade dos Dados:** Dados inconsistentes ou ausentes podem ser tratados por meio da implementação de regras de validação de dados.
+- **Formatos Complexos de Dados:** Utilize ferramentas de transformação para converter dados em um formato uniforme.
+- **Altos Volumes:** Opte por métodos de extração incremental para lidar com conjuntos de dados grandes de maneira eficiente.
+- **Desempenho do Sistema:** Equilibre a carga agendando extrações durante os horários de menor movimento.

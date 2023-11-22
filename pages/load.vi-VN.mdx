@@ -1,0 +1,30 @@
+# Tải dữ liệu
+
+## Tải dữ liệu đã được biến đổi
+
+Công đoạn cuối cùng trong quá trình ETL là tải dữ liệu đã được biến đổi vào hệ thống lưu trữ để phân tích và đưa ra quyết định. Bước này phải được tối ưu hóa để đảm bảo hiệu suất và đáng tin cậy.
+
+### Hệ thống lưu trữ đích
+
+Các loại hệ thống lưu trữ thông dụng bao gồm:
+
+- **Data Warehouse:** Kho lưu trữ quy mô lớn, như Amazon Redshift hoặc Google BigQuery.
+- **Cơ sở dữ liệu:** Cơ sở dữ liệu liên kết như MySQL hoặc cơ sở dữ liệu NoSQL như MongoDB.
+- **Data Lake:** Lưu trữ dữ liệu nguyên thủy và không cấu trúc, như Amazon S3 hoặc Hadoop.
+
+### Chiến lược tải dữ liệu (Tải theo lô vs. Tải theo thời gian thực)
+
+Dữ liệu có thể được tải bằng cách sử dụng các chiến lược khác nhau:
+
+- **Tải theo lô:** Dữ liệu được tải theo lô lớn theo các khoảng thời gian được lên lịch.
+- **Tải theo thời gian thực:** Dữ liệu được tải liên tục ngay khi nó có sẵn.
+
+### Thực tiễn tốt nhất khi tải dữ liệu
+
+Để đảm bảo tải dữ liệu hiệu quả:
+
+- **Tối ưu hiệu suất tải:** Sử dụng chỉ mục hóa, phân vùng và các chiến lược tải phù hợp.
+- **Tính toàn vẹn dữ liệu:** Duy trì tính nhất quán và độ chính xác của dữ liệu trong quá trình tải.
+- **Xử lý lỗi:** Triển khai cơ chế mạnh mẽ để ghi lại và giải quyết các lỗi khi tải dữ liệu.
+- **Giám sát:** Định kỳ giám sát quy trình tải để phát hiện các vấn đề về hiệu suất hoặc hạn chế trong quá trình tải.
+.

@@ -1,0 +1,33 @@
+# Kinyerés
+
+## Adat kinyerése forrásrendszerekből
+
+Az adat kinyerése az ETL folyamat első fázisa, amely magában foglalja az adatok kinyerését különböző forrásrendszerekből. Ez a lépés létfontosságú, mert megalapozza az adattranszformációs és betöltési fázisokat.
+
+### Adatforrás típusok
+
+Az adat különböző forrásokból kinyerhető, ideértve:
+
+- **Adatbázisok:** SQL, NoSQL adatbázisok.
+- **Pilótafelhő:** AWS S3, Google Cloud Storage.
+- **API-k:** RESTful szolgáltatások, web API-k.
+- **Fájlrendszer:** CSV, Excel, XML fájlok.
+- **Adatfolyam:** Élesben érkező adatok IoT eszközökből, közösségi média.
+
+### Adatkinyerési módszerek
+
+A kinyerés módszere a forrás típusától és az adat jellegétől függ:
+
+- **Teljes kinyerés:** Az összes adat lekérése a forrásrendszerből.
+- **Növekményes kinyerés:** Csak azóta új vagy megváltozott adatok visszakeresése az utolsó kinyerés óta.
+- **Logikai kinyerés:** Adatok kinyerése logikai nézetek vagy lekérdezések alapján.
+- **Fizikai kinyerés:** Az adatok másolása a tárolt formájukban.
+
+### Adatkinyerési kihívások és megoldások
+
+Az adatkinyerés közös kihívásai közé tartoznak:
+
+- **Adatminőség problémák:** Inkonzisztens vagy hiányzó adatok megoldhatók az adatellenőrzési szabályok bevezetésével.
+- **Komplex adatformátumok:** Használjon átalakító eszközöket az adatok egységes formára alakításához.
+- **Magas adatmennyiség:** Válassza a növekményes kinyerési módszereket a nagy adatkészletek hatékony kezeléséhez.
+- **Rendszer teljesítmény:** Egyensúlyban tartsa a terhelést a kinyerések ütemezésével a csúcsidőn kívül.

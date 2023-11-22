@@ -1,0 +1,33 @@
+# Extrahování
+
+## Extrahování dat ze zdrojových systémů
+
+Extrahování dat je první fází procesu ETL, která zahrnuje získání dat z různých zdrojových systémů. Tato fáze je klíčová, protože zajišťuje základ pro fáze transformace a načítání dat.
+
+### Typy zdrojů dat
+
+Data lze extrahovat z mnoha zdrojů, včetně:
+
+- **Databáze:** SQL, NoSQL databáze.
+- **Cloudové úložiště:** AWS S3, Google Cloud Storage.
+- **API:** RESTful služby, webová rozhraní API.
+- **Souborové systémy:** CSV, Excel, XML soubory.
+- **Proudící data:** Real-time data ze zařízení IoT, sociálních médií.
+
+### Metody extrakce dat
+
+Metoda extrakce závisí na typu zdroje a povaze dat:
+
+- **Úplná extrakce:** Vytažení všech dat ze zdrojového systému.
+- **Inkrementální extrakce:** Získání pouze nových nebo změněných dat od poslední extrakce.
+- **Logická extrakce:** Extrahování dat na základě logických pohledů nebo dotazů.
+- **Fyzická extrakce:** Kopírování dat přesně tak, jak jsou uložena.
+
+### Výzvy extrakce dat a jejich řešení
+
+Běžné výzvy při extrahování dat zahrnují:
+
+- **Problémy s kvalitou dat:** Nesoulad nebo chybějící data je možné řešit implementací pravidel pro ověřování dat.
+- **Složité formáty dat:** Použijte nástroje pro transformaci dat do jednotného formátu.
+- **Vysoké objemy dat:** Pro efektivní zpracování velkých datových sad sáhněte po inkrementálních metodách extrakce.
+- **Výkon systému:** Vyvážte zátěž plánováním extrakcí mimo špičkové hodiny.

@@ -1,0 +1,33 @@
+# Trích xuất
+
+## Trích xuất Dữ liệu từ Hệ thống Nguồn
+
+Trích xuất dữ liệu là giai đoạn đầu tiên của quy trình ETL, bao gồm việc lấy dữ liệu từ các hệ thống nguồn khác nhau. Bước này rất quan trọng vì nó xác định nền tảng cho các giai đoạn biến đổi và tải dữ liệu.
+
+### Các Loại Nguồn Dữ liệu
+
+Dữ liệu có thể được trích xuất từ rất nhiều nguồn, bao gồm:
+
+- **Cơ sở dữ liệu:** SQL, cơ sở dữ liệu NoSQL.
+- **Lưu trữ đám mây:** AWS S3, Google Cloud Storage.
+- **APIs:** Dịch vụ RESTful, các API web.
+- **Hệ thống tệp tin:** Các tệp tin CSV, Excel, XML.
+- **Dữ liệu luồng:** Dữ liệu thời gian thực từ các thiết bị IoT, mạng xã hội.
+
+### Phương Pháp Trích xuất Dữ liệu
+
+Phương pháp trích xuất phụ thuộc vào loại nguồn và tính chất của dữ liệu:
+
+- **Trích xuất Toàn bộ:** Lấy toàn bộ dữ liệu từ hệ thống nguồn.
+- **Trích xuất Tích lũy:** Lấy chỉ dữ liệu mới hoặc đã thay đổi kể từ lần trích xuất trước đó.
+- **Trích xuất Logic:** Trích xuất dữ liệu dựa trên các góc nhìn hoặc truy vấn logic.
+- **Trích xuất Vật lý:** Sao chép dữ liệu một cách chính xác như nó được lưu trữ.
+
+### Thách thức và Giải pháp trong việc Trích xuất Dữ liệu
+
+Các thách thức phổ biến trong việc trích xuất dữ liệu bao gồm:
+
+- **Vấn đề về Chất lượng Dữ liệu:** Dữ liệu không nhất quán hoặc thiếu có thể được giải quyết bằng việc áp dụng các quy tắc xác thực dữ liệu.
+- **Định dạng Dữ liệu Phức tạp:** Sử dụng công cụ biến đổi để chuyển đổi dữ liệu thành định dạng đồng nhất.
+- **Dung lượng lớn:** Lựa chọn phương pháp trích xuất tăng dần để xử lý hiệu quả các tập dữ liệu lớn.
+- **Hiệu suất Hệ thống:** Cân bằng tải bằng cách lên lịch trích xuất trong khoảng thời gian không cao điểm.

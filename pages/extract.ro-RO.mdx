@@ -1,0 +1,33 @@
+# Extractare
+
+## Extragearea datelor din sistemele sursă
+
+Extractarea datelor este prima fază a procesului ETL, implicând recuperarea datelor din diverse sisteme sursă. Această etapă este crucială, deoarece stabilește fundația pentru fazele de transformare și încărcare a datelor.
+
+### Tipuri de surse de date
+
+Datele pot fi extrase dintr-o multitudine de surse, inclusiv:
+
+- **Baze de date:** baze de date SQL, NoSQL.
+- **Stocare în cloud:** AWS S3, Google Cloud Storage.
+- **API-uri:** servicii RESTful, API-uri web.
+- **Sisteme de fișiere:** fișiere CSV, Excel, XML.
+- **Date în flux:** date în timp real de la dispozitive IoT, rețele sociale.
+
+### Metode de extractare a datelor
+
+Metoda de extragere depinde de tipul sursei și natura datelor:
+
+- **Extragere completă:** Extrage toate datele din sistemul sursă.
+- **Extragere incrementală:** Recuperarea doar a datelor noi sau modificate de la ultima extragere.
+- **Extragere logică:** Extrage datele pe baza vizualizărilor logice sau a interogărilor.
+- **Extragere fizică:** Copiază datele exact așa cum sunt stocate.
+
+### Provocări și soluții în extragerea datelor
+
+Provocările comune în extragerea datelor includ:
+
+- **Probleme de calitate a datelor:** Date inconsistente sau lipsă pot fi abordate prin implementarea regulilor de validare a datelor.
+- **Formate de date complexe:** Utilizați instrumente de transformare pentru a converti datele într-un format uniform.
+- **Volume mari:** Optați pentru metode de extragere incrementală pentru a manipula seturi de date mari în mod eficient.
+- **Performanță de sistem:** Echilibrați încărcarea programând extrageri în timpul orelor de vârf.

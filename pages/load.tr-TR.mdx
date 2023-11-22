@@ -1,0 +1,30 @@
+# Yükleme
+
+## Dönüştürülmüş Verileri Yükleme
+
+ETL sürecinin son aşaması, dönüştürülmüş verileri analiz ve karar verme için bir veri deposuna yüklemedir. Bu adım, verimlilik ve güvenilirlik için optimize edilmelidir.
+
+### Hedef Veri Depoları
+
+Yaygın veri depolama türleri arasında şunlar bulunur:
+
+- **Veri Ambarları:** Amazon Redshift veya Google BigQuery gibi büyük ölçekli depolar.
+- **Veritabanları:** MySQL gibi ilişkisel veritabanları veya MongoDB gibi NoSQL veritabanları.
+- **Veri Gölleri:** Amazon S3 veya Hadoop gibi ham, yapılandırılmamış veriler için depolama alanı.
+
+### Yükleme Stratejileri (Toplu vs. Gerçek Zamanlı)
+
+Veri farklı stratejiler kullanılarak yüklenebilir:
+
+- **Toplu Yükleme:** Veri, belirli zaman aralıklarında büyük topluluklar halinde yüklenir.
+- **Gerçek Zamanlı Yükleme:** Veri, mevcut olduğu anda sürekli olarak yüklenir.
+
+### Veri Yükleme En İyi Uygulamaları
+
+Veri yükleme işleminin verimli olmasını sağlamak için:
+
+- **Yükleme Performansını Optimize Edin:** Dizinleme, bölmelendirme ve uygun yükleme stratejilerini kullanın.
+- **Veri Bütünlüğü:** Yükleme sırasında veri tutarlılığını ve doğruluğunu koruyun.
+- **Hata İşleme:** Yükleme hatalarını yakalamak ve çözmek için sağlam mekanizmalar uygulayın.
+- **İzleme:** Yükleme süreçlerini düzenli olarak performans sorunları veya darboğazlar açısından izleyin.
+.

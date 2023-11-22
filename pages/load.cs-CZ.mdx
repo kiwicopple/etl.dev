@@ -1,0 +1,29 @@
+# Načítání
+
+## Načítání transformovaných dat
+
+Poslední fází procesu ETL je načítání transformovaných dat do datového úložiště pro analýzu a rozhodování. Tento krok musí být optimalizován pro efektivitu a spolehlivost.
+
+### Cílová datová úložiště
+
+Běžné typy datových úložišť zahrnují:
+
+- **Datové sklady:** Velkorozsahová úložiště, jako je Amazon Redshift nebo Google BigQuery.
+- **Databáze:** Relační databáze, jako je MySQL, nebo NoSQL databáze, jako je MongoDB.
+- **Datové jezera:** Úložiště pro surová, nestrukturovaná data, jako je Amazon S3 nebo Hadoop.
+
+### Strategie načítání (dávkové vs. v reálném čase)
+
+Data lze načítat pomocí různých strategií:
+
+- **Dávkové načítání:** Data jsou načítána ve velkých dávkách v pravidelných intervalech.
+- **Načítání v reálném čase:** Data jsou nepřetržitě načítána, jakmile jsou k dispozici.
+
+### Nejlepší postupy pro načítání dat
+
+Pro zajištění efektivního načítání dat:
+
+- **Optimalizace výkonu načítání:** Použití indexování, členění a vhodných strategií načítání.
+- **Integrita dat:** Udržování konzistence a přesnosti dat během načítání.
+- **Zpracování chyb:** Implementace robustních mechanismů pro zachycení a řešení chyb při načítání.
+- **Monitorování:** Pravidelně monitorujte procesy načítání pro případné problémy se výkonem nebo úzkými místy.

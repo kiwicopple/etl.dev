@@ -1,0 +1,33 @@
+# Estrazione
+
+## Estrazione dei dati dai sistemi di origine
+
+L'estrazione dei dati è la prima fase del processo di ETL, che comporta il recupero dei dati da vari sistemi di origine. Questo passaggio è cruciale in quanto stabilisce le basi per le fasi di trasformazione e caricamento dei dati.
+
+### Tipi di fonti di dati
+
+I dati possono essere estratti da una moltitudine di fonti, tra cui:
+
+- **Database:** SQL, database NoSQL.
+- **Archiviazione cloud:** AWS S3, Google Cloud Storage.
+- **API:** servizi RESTful, API web.
+- **Sistemi di file:** file CSV, Excel, XML.
+- **Dati in streaming:** dati in tempo reale provenienti da dispositivi IoT, social media.
+
+### Metodi di estrazione dei dati
+
+Il metodo di estrazione dipende dal tipo di fonte e dalla natura dei dati:
+
+- **Estrazione completa:** Estrazione di tutti i dati dal sistema di origine.
+- **Estrazione incrementale:** Recupero solo dei dati nuovi o modificati rispetto all'ultima estrazione.
+- **Estrazione logica:** Estrazione dei dati basata su visualizzazioni o query logiche.
+- **Estrazione fisica:** Copiare i dati esattamente come sono archiviati.
+
+### Sfide ed soluzioni per l'estrazione dei dati
+
+Le sfide comuni nell'estrazione dei dati includono:
+
+- **Problemi di qualità dei dati:** Dati inconsistenti o mancanti possono essere affrontati implementando regole di convalida dei dati.
+- **Formati di dati complessi:** Utilizzare strumenti di trasformazione per convertire i dati in un formato uniforme.
+- **Volumi elevati:** Optare per metodi di estrazione incrementale per gestire grandi set di dati in modo efficiente.
+- **Prestazioni di sistema:** Bilanciare il carico pianificando le estrazioni durante le ore di minore affluenza.

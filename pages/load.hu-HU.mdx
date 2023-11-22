@@ -1,0 +1,29 @@
+# Betöltés
+
+## Átalakított adatok betöltése
+
+Az ETL folyamat végső lépése az átalakított adatok betöltése egy adattárolóba elemzés és döntéshozás céljából. Ez a lépés optimalizálva kell legyen az hatékonyság és megbízhatóság érdekében.
+
+### Céladattárolók
+
+A leggyakoribb adattároló típusok a következők lehetnek:
+
+- **Adattárházak:** Nagy méretű tárolók, mint például az Amazon Redshift vagy a Google BigQuery.
+- **Adatbázisok:** Relációs adatbázisok, mint a MySQL, vagy NoSQL adatbázisok, mint a MongoDB.
+- **Adattavak:** Tárolók nyers, nem strukturált adatokhoz, mint például az Amazon S3 vagy a Hadoop.
+
+### Betöltési stratégiák (Batch vs. Valós idejű)
+
+Az adatokat különböző stratégiák alkalmazásával lehet betölteni:
+
+- **Batch betöltés:** Az adatok nagy adagokban, ütemezett időközönként kerülnek betöltésre.
+- **Valós idejű betöltés:** Az adatok folyamatosan betöltődnek, amint rendelkezésre állnak.
+
+### Adatbetöltés legjobb gyakorlatai
+
+A hatékony adatbetöltés érdekében:
+
+- **Betöltési teljesítmény optimalizálás:** Indextípusok, partícionálás és megfelelő betöltési stratégiák alkalmazása.
+- **Adatintegritás:** Az adatok konzisztenciájának és pontosságának fenntartása a betöltés során.
+- **Hibakezelés:** Robusztus mechanizmusok implementálása a betöltési hibák rögzítéséhez és feloldásához.
+- **Monitoring:** Rendszeresen figyelni a betöltési folyamatokat a teljesítményproblémák vagy f bottleneck-ok észlelése érdekében.

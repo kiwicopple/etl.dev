@@ -1,0 +1,33 @@
+# Hämtning
+
+## Hämta data från källsystem
+
+Att hämta data är den första fasen av ETL-processen och innebär att hämta data från olika källsystem. Den här steget är avgörande eftersom det lägger grunden för datatransformations- och laddningsfaserna.
+
+### Typer av datakällor
+
+Data kan hämtas från olika källor, inklusive:
+
+- **Databaser:** SQL, NoSQL-databaser.
+- **Molnlagring:** AWS S3, Google Cloud Storage.
+- **API:er:** RESTful-tjänster, webb-API:er.
+- **Filsystem:** CSV-, Excel-, XML-filer.
+- **Strömmad data:** Realtidsdata från IoT-enheter, sociala medier.
+
+### Metoder för datahämtning
+
+Metoden för hämtning beror på källtypen och dataens natur:
+
+- **Fullständig hämtning:** Hämta all data från källsystemet.
+- **Inkrementell hämtning:** Hämta endast ny eller ändrad data sedan den senaste hämtningen.
+- **Logisk hämtning:** Hämta data baserat på logiska vyer eller frågor.
+- **Fysisk hämtning:** Kopiera data exakt som den är lagrad.
+
+### Utmaningar och lösningar för datahämtning
+
+Vanliga utmaningar vid datahämtning inkluderar:
+
+- **Problem med datakvalitet:** Inkonsistent eller saknad data kan lösas genom att implementera regler för datavalidering.
+- **Komplexa dataformat:** Använd transformationsverktyg för att konvertera data till en enhetlig format.
+- **Stora datamängder:** Välj inkrementella hämtningsmetoder för att hantera stora datamängder effektivt.
+- **Systemprestanda:** Jämna ut belastningen genom att schemalägga hämtningar under lågbelastade timmar.

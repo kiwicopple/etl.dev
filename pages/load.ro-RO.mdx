@@ -1,0 +1,29 @@
+# Încărcare
+
+## Încărcarea datelor transformate
+
+Ultima etapă în procesul ETL este încărcarea datelor transformate într-un magazin de date pentru analiză și luarea deciziilor. Această etapă trebuie optimizată pentru eficiență și fiabilitate.
+
+### Magazinul de date destinație
+
+Tipurile comune de magazin de date includ:
+
+- **Depozite de date:** Depozite de scară largă, cum ar fi Amazon Redshift sau Google BigQuery.
+- **Baze de date:** Baze de date relaționale precum MySQL sau baze de date NoSQL precum MongoDB.
+- **Lacuri de date:** Stocare pentru date brute și nestructurate, cum ar fi Amazon S3 sau Hadoop.
+
+### Strategii de încărcare (În blocuri vs. Timp real)
+
+Datele pot fi încărcate folosind diferite strategii:
+
+- **Încărcare în blocuri:** Datele sunt încărcate în blocuri mari la intervale programate.
+- **Încărcare în timp real:** Datele sunt încărcate continuu imediat ce devin disponibile.
+
+### Cele mai bune practici pentru încărcarea datelor
+
+Pentru a asigura o încărcare eficientă a datelor:
+
+- **Optimizarea performanței de încărcare:** Utilizarea indexării, particionării și a strategiilor adecvate de încărcare.
+- **Integritatea datelor:** Menținerea consistenței și exactității datelor în timpul încărcării.
+- **Gestionarea erorilor:** Implementarea unor mecanisme robuste pentru capturarea și rezolvarea erorilor de încărcare.
+- **Monitorizare:** Monitorizarea periodică a proceselor de încărcare pentru identificarea oricăror probleme de performanță sau constrângeri.

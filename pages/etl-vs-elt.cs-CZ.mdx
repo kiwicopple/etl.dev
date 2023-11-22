@@ -1,0 +1,31 @@
+# ETL vs. ELT
+
+Pochopte si rozdíly mezi ETL (Extract, Transform, Load) a ELT (Extract, Load, Transform) je klíčové pro výběr správného přístupu pro váš datový potrubí.
+
+## Klíčové rozdíly: ETL vs. ELT
+
+- **Pořadí zpracování:** ETL data transformuje před načítáním, zatímco ELT nejdříve načítá data a pak je transformuje.
+- **Místo zpracování dat:** ETL často transformuje data mimo cílový systém, zatímco ELT využívá výkon cílového systému pro transformaci.
+- **Flexibilita:** ELT má tendenci být flexibilnější a umožňuje transformace po načítání dat.
+
+## Kdy použít ETL vs. ELT
+
+- **ETL:** Preferováno při práci s legacy systémy nebo pokud jsou potřeba intenzivní transformace dat před načítáním.
+- **ELT:** Ideální pro aplikace s velkými daty a cloudové systémy, kde je úložiště a výpočetní kapacita snadno škálovatelná.
+
+## Pro a proti ETL a ELT
+
+### ETL
+
+- **Pro:** Lepší pro složité transformace; užitečná pro udržení soukromí dat.
+- **Proti:** Může být časově náročné; omezená škálovatelnost.
+
+### ELT
+
+- **Pro:** Rychlejší pro velké objemy dat; vysoká škálovatelnost.
+- **Proti:** Vyžaduje robustní cílové systémy; potenciální bezpečnostní obavy.
+
+## Reálné použití
+
+- **ETL:** Finanční reporting, kde musí být data před načítáním transformována a očištěna.
+- **ELT:** Analýza velkých dat, kde jsou nejprve načtena velká datová soubory a pak jsou na základě analytických potřeb transformována.

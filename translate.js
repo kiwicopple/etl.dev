@@ -6,11 +6,49 @@ const openai = new OpenAI({
   apiKey: process.env['OPENAI_API_KEY'],
   organization: process.env['OPENAI_ORG'],
 })
-
-const locales = ['zh-CN', 'jp-JP'] // Add more locales here
+const primaryLocale = 'en-US'
+const primarySuffix = 'en-US.mdx'
+const localeList = [
+  { locale: 'en-US', text: '🇺🇸 English' },
+  { locale: 'zh-CN', text: '🇨🇳 Chinese (Simplified)' },
+  { locale: 'es-ES', text: '🇪🇸 Spanish' },
+  { locale: 'hi-IN', text: '🇮🇳 Hindi' },
+  { locale: 'ar-SA', text: '🇸🇦 Arabic' },
+  { locale: 'bn-IN', text: '🇮🇳 Bengali' },
+  { locale: 'pt-BR', text: '🇧🇷 Portuguese (Brazil)' },
+  { locale: 'ru-RU', text: '🇷🇺 Russian' },
+  { locale: 'ja-JP', text: '🇯🇵 Japanese' },
+  { locale: 'de-DE', text: '🇩🇪 German' },
+  { locale: 'jv-ID', text: '🇮🇩 Javanese' },
+  { locale: 'ko-KR', text: '🇰🇷 Korean' },
+  { locale: 'fr-FR', text: '🇫🇷 French' },
+  { locale: 'tr-TR', text: '🇹🇷 Turkish' },
+  { locale: 'vi-VN', text: '🇻🇳 Vietnamese' },
+  { locale: 'ta-IN', text: '🇮🇳 Tamil' },
+  { locale: 'ur-PK', text: '🇵🇰 Urdu' },
+  { locale: 'fa-IR', text: '🇮🇷 Persian' },
+  { locale: 'it-IT', text: '🇮🇹 Italian' },
+  { locale: 'pl-PL', text: '🇵🇱 Polish' },
+  { locale: 'uk-UA', text: '🇺🇦 Ukrainian' },
+  { locale: 'ro-RO', text: '🇷🇴 Romanian' },
+  { locale: 'nl-NL', text: '🇳🇱 Dutch' },
+  { locale: 'id-ID', text: '🇮🇩 Indonesian' },
+  { locale: 'th-TH', text: '🇹🇭 Thai' },
+  { locale: 'el-GR', text: '🇬🇷 Greek' },
+  { locale: 'hu-HU', text: '🇭🇺 Hungarian' },
+  { locale: 'sv-SE', text: '🇸🇪 Swedish' },
+  { locale: 'cs-CZ', text: '🇨🇿 Czech' },
+  { locale: 'bg-BG', text: '🇧🇬 Bulgarian' },
+]
+const locales = localeList.map((locale) => locale.locale)
 const files = fs.readdirSync('./pages')
 
-async function translateText(text, targetLanguage, fileName) {
+// We translate and write the file at the same time so that translations are not held in memory
+async function translateAndWriteFile(text, targetLanguage, fileName) {
+  if (targetLanguage === primaryLocale) {
+    console.log(`Skipping translation of ${targetLanguage}.`)
+    return
+  }
   console.log(`Starting translation of ${fileName} to ${targetLanguage}`)
   try {
     const params = {
@@ -23,47 +61,32 @@ async function translateText(text, targetLanguage, fileName) {
       model: 'gpt-3.5-turbo',
     }
     const chatCompletion = await openai.chat.completions.create(params)
+    const translatedContent = chatCompletion.choices[0].message.content.trim()
 
-    console.log(`Completed translation of ${fileName} to ${targetLanguage}`)
-    return chatCompletion.choices[0].message.content.trim()
+    const newFileName = fileName.replace('en-US.mdx', `${targetLanguage}.mdx`)
+    fs.writeFileSync(`./pages/${newFileName}`, translatedContent)
+    console.log(`Completed translation and wrote ${fileName} to ${newFileName}`)
   } catch (error) {
     console.error(
-      `Error in translating ${fileName} to ${targetLanguage}:`,
+      `Error in translating and writing ${fileName} to ${targetLanguage}:`,
       error
     )
-    return ''
   }
 }
 
 ;(async () => {
-  const translationPromises = []
-
-  files.forEach((file) => {
-    if (file.indexOf('en-US.mdx') === -1) {
-      return
-    }
-
-    const content = fs.readFileSync(`./pages/${file}`, 'utf-8')
-
-    locales.forEach((locale) => {
-      translationPromises.push({
-        file,
-        locale,
-        promise: translateText(content, locale, file),
-      })
-    })
-  })
-
   console.log('Starting all translations...')
-  const results = await Promise.all(translationPromises.map((p) => p.promise))
-  console.log('All translations completed. Writing to files...')
+  const translationPromises = files
+    .filter((file) => file.includes(primarySuffix))
+    .flatMap((file) => {
+      const content = fs.readFileSync(`./pages/${file}`, 'utf-8')
+      return locales.map((locale) =>
+        translateAndWriteFile(content, locale, file)
+      )
+    })
 
-  results.forEach((translatedContent, index) => {
-    const { file, locale } = translationPromises[index]
-    const newFileName = file.replace('en-US.mdx', `${locale}.mdx`)
-    console.log(`Writing translated content of ${file} to ${newFileName}`)
-    fs.writeFileSync(`./pages/${newFileName}`, translatedContent)
-  })
-
-  console.log('All files have been written successfully.')
+  await Promise.all(translationPromises)
+  console.log(
+    'All translations and file writings have been completed successfully.'
+  )
 })()

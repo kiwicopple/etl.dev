@@ -1,0 +1,31 @@
+# ETL vs. ELT
+
+Memahami perbedaan antara ETL (Extract, Transform, Load) dan ELT (Extract, Load, Transform) adalah penting dalam memilih pendekatan yang tepat untuk saluran data Anda.
+
+## Perbedaan Utama: ETL vs. ELT
+
+- **Urutan Proses:** ETL mentransformasikan data sebelum dimuat, sementara ELT memuat data terlebih dahulu kemudian mentransformasikannya.
+- **Lokasi Pemrosesan Data:** ETL seringkali mentransformasikan data di luar sistem target, sedangkan ELT memanfaatkan kekuatan sistem target untuk transformasi.
+- **Fleksibilitas:** ELT cenderung lebih fleksibel, memungkinkan transformasi setelah data dimuat.
+
+## Kapan Menggunakan ETL vs. ELT
+
+- **ETL:** disukai saat bekerja dengan sistem warisan atau saat data membutuhkan transformasi intensif sebelum dimuat.
+- **ELT:** Ideal untuk aplikasi big data dan sistem berbasis cloud, di mana penyimpanan dan daya pemrosesan lebih skalabel.
+
+## Kelebihan dan Kekurangan ETL dan ELT
+
+### ETL
+
+- **Kelebihan:** Lebih baik untuk transformasi kompleks; berguna untuk menjaga privasi data.
+- **Kekurangan:** Dapat memakan waktu; skalabilitas terbatas.
+
+### ELT
+
+- **Kelebihan:** Lebih cepat untuk volume data besar; sangat skalabel.
+- **Kekurangan:** Membutuhkan sistem target yang kuat; potensi masalah keamanan.
+
+## Kasus Penggunaan di Dunia Nyata
+
+- **ETL:** Pelaporan keuangan di mana data harus diubah dan dibersihkan sebelum dimuat.
+- **ELT:** Analisis big data di mana set data besar dimuat terlebih dahulu kemudian ditransformasikan berdasarkan kebutuhan analitis.

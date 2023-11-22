@@ -1,0 +1,29 @@
+# Cargar
+
+## Cargando Datos Transformados
+
+La etapa final en el proceso ETL es cargar los datos transformados en una tienda de datos para su análisis y toma de decisiones. Este paso debe ser optimizado para la eficiencia y confiabilidad.
+
+### Tiendas de Datos de Destino
+
+Los tipos comunes de tiendas de datos incluyen:
+
+- **Almacenes de Datos:** Repositorios a gran escala, como Amazon Redshift o Google BigQuery.
+- **Bases de Datos:** Bases de datos relacionales como MySQL, o bases de datos NoSQL como MongoDB.
+- **Lagos de Datos:** Almacenamiento para datos sin procesar y no estructurados, como Amazon S3 o Hadoop.
+
+### Estrategias de Carga (Por lotes vs. En tiempo real)
+
+Los datos se pueden cargar utilizando diferentes estrategias:
+
+- **Carga por lotes:** Los datos se cargan en grandes lotes en intervalos programados.
+- **Carga en tiempo real:** Los datos se cargan continuamente tan pronto como estén disponibles.
+
+### Mejores Prácticas de Carga de Datos
+
+Para garantizar una carga eficiente de datos:
+
+- **Optimizar el Rendimiento de Carga:** Utilizar indexación, particionamiento y estrategias de carga adecuadas.
+- **Integridad de Datos:** Mantener la consistencia y precisión de los datos durante la carga.
+- **Manejo de Errores:** Implementar mecanismos sólidos para capturar y resolver errores de carga.
+- **Monitoreo:** Supervisar regularmente los procesos de carga en busca de problemas de rendimiento o cuellos de botella.

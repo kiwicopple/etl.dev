@@ -1,0 +1,33 @@
+# Wyciąganie
+
+## Wydobycie danych ze źródeł
+
+Wyciąganie danych jest pierwszym etapem procesu ETL i polega na pobieraniu danych z różnych źródeł. Ten krok jest kluczowy, ponieważ stanowi podstawę dla faz transformacji i ładowania danych.
+
+### Rodzaje źródeł danych
+
+Dane można pobierać z wielu źródeł, w tym:
+
+- **Bazy danych:** SQL, bazy danych NoSQL.
+- **Cloud Storage:** AWS S3, Google Cloud Storage.
+- **API:** usługi RESTful, interfejsy API.
+- **Systemy plików:** pliki CSV, Excel, XML.
+- **Strumienie danych:** dane czasu rzeczywistego z urządzeń IoT, media społecznościowe.
+
+### Metody wydobycia danych
+
+Metoda wydobycia zależy od typu źródła i charakteru danych:
+
+- **Pełne wydobycie:** Pobranie wszystkich danych z systemu źródłowego.
+- **Inkrementalne wydobycie:** Pobranie tylko nowych lub zmienionych danych od ostatniego wydobycia.
+- **Logiczne wydobycie:** Wydobycie danych na podstawie logicznych widoków lub zapytań.
+- **Fizyczne wydobycie:** Skopiowanie danych dokładnie tak, jak są przechowywane.
+
+### Wyzwania i rozwiązania związane z wydobyciem danych
+
+Najczęstsze wyzwania związane z wydobyciem danych to:
+
+- **Problemy z jakością danych:** Niespójne lub brakujące dane można rozwiązać poprzez stosowanie reguł walidacji danych.
+- **Złożone formaty danych:** Użyj narzędzi transformacji do konwersji danych na jednolity format.
+- **Duże wolumeny danych:** Wybierz metody inkrementalnego wydobycia, aby efektywnie obsługiwać duże zbiory danych.
+- **Wydajność systemu:** Zrównoważ obciążenie, harmonizując harmonogramy wydobycia w godzinach poza szczytem.

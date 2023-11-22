@@ -1,0 +1,31 @@
+# ETL vs. ELT
+
+Az ETL (Kinyerés, Átalakítás, Betöltés) és az ELT (Kinyerés, Betöltés, Átalakítás) közötti különbségek megértése létfontosságú a megfelelő megközelítés kiválasztásához az adatvezetékeknél.
+
+## Fő különbségek: ETL vs. ELT
+
+- **Feldolgozási sorrend:** Az ETL a betöltés előtt alakítja át az adatokat, míg az ELT először betölti az adatokat, majd átalakítja azokat.
+- **Adatfeldolgozási helyszín:** Az ETL gyakran az adatokat a célszisztémán kívül alakítja át, míg az ELT kihasználja a célszisztéma erejét az átalakításhoz.
+- **Rugalmasítás:** Az ELT rugalmasabb tendenciájú, lehetővé teszi az adatok betöltése utáni átalakításokat.
+
+## Mikor válasszuk az ETL-t és az ELT-t
+
+- **ETL:** Ajánlott örökségi rendszerekkel vagy olyan adatokkal való munkavégzés esetén, amelyek előtt komoly átalakításra van szükség a betöltés előtt.
+- **ELT:** Ideális a nagy adatkészletekkel és felhőalapú rendszerekkel történő alkalmazásokhoz, ahol a tárolás és a feldolgozási kapacitás skálázhatóbb.
+
+## Az ETL és az ELT előnyei és hátrányai
+
+### ETL
+
+- **Előnyök:** Jobb komplex átalakításokhoz; hasznos az adatvédelem fenntartásához.
+- **Hátrányok:** Időigényes lehet; korlátozott skálázhatóság.
+
+### ELT
+
+- **Előnyök:** Gyorsabb nagy adatmennyiségek esetén; nagyobb mértékben skálázható.
+- **Hátrányok:** Robusztus célszisztémát igényel; lehetséges biztonsági aggályok.
+
+## Valós életbeli felhasználási esetek
+
+- **ETL:** Pénzügyi jelentések, ahol az adatokat átalakítani és megtisztítani kell a betöltés előtt.
+- **ELT:** Nagy adatkészleteket felhasználó nagy adathalmazok, amelyeket először betöltnek, majd az elemzési igényeknek megfelelően átalakítanak.

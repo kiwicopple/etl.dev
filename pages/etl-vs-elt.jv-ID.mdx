@@ -1,0 +1,31 @@
+# ETL vs. ELT
+
+Ngalami langsung kodhoh antara ETL (Extract, Transform, Load) lan ELT (Extract, Load, Transform) iku penting kanggo milih cara sing cocog kanggo pipeline data sampeyan.
+
+## Panggolan ETL vs. ELT sing Penting
+
+- **Urutan Proses:** ETL ngalami transformasi data sadurunge diload, sementara ELT nggawa data dulu lan weruh ngubahne.
+- **Lokasi Pangolah Data:** ETL sering nganggo transformasi data sajrone sistem sasaran, nalika ELT milih pangolan saka sistim sasaran kang pancen kuwat kanggo nggawe transformasi.
+- **Kamampuan Adaptasi:** ELT amung munggah kewan kang luwih adaptable, ngidini transformasi sawise data diload.
+
+## Saat Milih ETL vs. ELT
+
+- **ETL:** Diwenehi prioritas nalika nganggo sistem lawas utawa nalika data kudu ngidini transformasi sing kompleks sadurunge ngeload.
+- **ELT:** Apik kanggo aplikasi data gedhe lan sistem berbasis cloud, ngendhani penimbunan lan kapasitas pemrosesan sing luwih scalabel.
+
+## Kelebihan lan Kekurangan ETL lan ELT
+
+### ETL
+
+- **Kelebihan:** Lebih apik kanggo transformasi sing kompleks; berguna kanggo nggawe privasi data.
+- **Kekurangan:** Bisa njaluk wates acara; kapasitas scalabel terbatas.
+
+### ELT
+
+- **Kelebihan:** Lebih cepat kanggo volume data gedhe; luwih scalabel.
+- **Kekurangan:** Perlu sistem sasaran sing kuwat; potensi keamanan sing kedadean.
+
+## Panggunaan Kasus Nyata
+
+- **ETL:** Laporan keuangan nalika data kudu diubah lan dibersihkan sadurunge ngeload.
+- **ELT:** Analitika data gedhe nalika dataset gedhe diload dulu lan weruh ngubahne sesuai kebutuhan analitis.
